@@ -5,7 +5,6 @@ import {
 } from 'react-native-responsive-screen';
 
 export const Container = styled.View`
-  flex: 1;
   align-items: center;
   margin-bottom: 25px;
 `;

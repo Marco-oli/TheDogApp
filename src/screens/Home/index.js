@@ -9,7 +9,7 @@ import api from '../../services/api';
 import * as S from './styles';
 import {searchIcon} from '../../assets/images';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   const [dogs, setDogs] = useState([]);
@@ -17,7 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     api.get('/breeds').then(r => {
-      setDogs(r.data.slice(0, 15));
+      setDogs(r.data);
     });
   }, []);
 
@@ -29,7 +29,14 @@ const Home = () => {
     });
   }, [search]);
 
-  const renderDogs = ({item}) => <DogsCard dogName={item.name} />;
+  const renderDogs = ({item}) => {
+    return (
+      <DogsCard
+        dogName={item.name}
+        onPress={() => navigation.navigate('Details', {detailDog: item})}
+      />
+    );
+  };
 
   if (loading) {
     return (
