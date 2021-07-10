@@ -12,7 +12,7 @@ const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    background: '#b7b7c8',
+    background: '#e5e5e5',
   },
 };
 
