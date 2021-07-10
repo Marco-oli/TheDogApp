@@ -30,14 +30,6 @@ const Details = ({navigation, route}) => {
         </S.ContainerNameDog>
 
         <S.ContainerDescriptions>
-          {detailDog.origin ||
-            (detailDog.country_code && (
-              <S.DescriptionText>
-                Origem:{' '}
-                <S.Text>{detailDog.origin || detailDog.country_code}</S.Text>
-              </S.DescriptionText>
-            ))}
-
           <S.DescriptionText>
             Altura: <S.Text>{detailDog.height.imperial}</S.Text>
           </S.DescriptionText>

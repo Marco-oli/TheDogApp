@@ -20,7 +20,12 @@ export const ImageDog = styled.ImageBackground`
   align-items: flex-start;
 `;
 
-export const ContainerButtonBack = styled(ImageDog)``;
+export const ContainerButtonBack = styled.View`
+  flex: 1;
+  padding-horizontal: ${wp(6)}px;
+  padding-top: ${hp(2)}px;
+  align-items: flex-start;
+`;
 
 export const ButtonBack = styled.TouchableOpacity`
   background-color: #00000030;
